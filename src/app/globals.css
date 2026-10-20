@@ -259,7 +259,7 @@ footer a:hover {
 }
 
 .hero-intro {
-  width: min(31rem, 100%);
+  width: min(17rem, 100%);
   margin: 1.5rem 0 0;
   font-size: clamp(1rem, 1.25vw, 1.2rem);
   line-height: 1.35;
@@ -1417,7 +1417,12 @@ footer {
   .brand { gap: .6rem; }
   .brand-type strong { font-size: 1.2rem; }
   .brand-type > span { font-size: .8rem; }
-  .hero-copy { width: min(35rem, 54vw); }
+  .hero-copy { width: min(19rem, 44vw); }
+  .hero-intro {
+    max-width: 15rem;
+    background: var(--canvas);
+    box-shadow: 0 0 1rem .6rem var(--canvas);
+  }
   .hero h1 { font-size: clamp(3rem, 6vw, 5rem); }
   .intro-grid { grid-template-columns: 1fr; }
   .community h2 { font-size: clamp(4rem, 9vw, 7rem); }

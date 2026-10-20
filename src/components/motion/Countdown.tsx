@@ -3,6 +3,14 @@
 import { useEffect, useState } from "react";
 import { eventStatus } from "@/lib/site";
 
+const configuredDays = parseManualDays(process.env.NEXT_PUBLIC_COUNTDOWN_DAYS);
+
+export function parseManualDays(value: string | undefined): number | null {
+  if (!value || !/^\d+$/.test(value)) return null;
+  const days = Number(value);
+  return Number.isSafeInteger(days) ? days : null;
+}
+
 export function timeUntil(startAt: string, now: number): number[] | null {
   const target = Date.parse(startAt);
   if (!Number.isFinite(target)) return null;
@@ -19,6 +27,7 @@ export function Countdown() {
   const [now, setNow] = useState<number | null>(null);
   const status = now === null ? null : eventStatus(now);
   const remaining = status?.target && now !== null ? timeUntil(status.target, now) : null;
+  const values = remaining ? [configuredDays ?? remaining[0], ...remaining.slice(1)] : null;
 
   useEffect(() => {
     const update = () => setNow(Date.now());
@@ -37,9 +46,9 @@ export function Countdown() {
   return (
     <div className={`hero-countdown hero-countdown--${status.phase}`} aria-label={status.label}>
       <span className="hero-countdown-label">{status.label}</span>
-      {remaining ? (
+      {values ? (
         <div className="hero-countdown-numbers" role="timer" aria-live="off">
-          {remaining.map((value, index) => (
+          {values.map((value, index) => (
             <span key={index}>
               <strong>{String(value).padStart(2, "0")}</strong>
               <small>{["days", "hours", "mins", "secs"][index]}</small>

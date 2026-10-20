@@ -16,17 +16,17 @@ export const challengeSteps = [
 export const selectionSteps = [
   ["Applications", "Teams submit evidence of previous work, product readiness, and a credible path to the first three customers."],
   ["Shortlisting", "Organizers review technical experience, execution capability, monetization strategy, and commitment."],
-  ["Online interviews", "Shortlisted teams join a 15–20 minute interview on October 23. Both teammates should attend."],
+  ["Online interviews", "Shortlisted teams join a 15–20 minute interview on November 12. Both teammates should attend."],
   ["Six teams", "Five teams are selected from applications and one organizer wildcard completes the room."],
   ["Confirmation", "Every selected participant accepts the final rules, filming terms, safety guidance, and payment process."],
 ] as const;
 
 export const timeline = [
-  ["Oct 22 · 11:59 PM", "Applications close. Submission is an application, not automatic registration."],
-  ["Oct 23", "Shortlisted teams attend online interviews with both teammates present."],
-  ["Oct 24", "Final selection, rules acknowledgment, and technical onboarding."],
-  ["Oct 25 · 10:00 AM", "The 32-hour build, launch, sales, and livestream window begins."],
-  ["Oct 26 · 6:00 PM", "Products, demos, revenue summaries, and final submissions are due."],
+  ["Nov 11 · 11:59 PM", "Applications close. Submission is an application, not automatic registration."],
+  ["Nov 12", "Shortlisted teams attend online interviews with both teammates present."],
+  ["Nov 13", "Final selection, rules acknowledgment, and technical onboarding."],
+  ["Nov 14 · 10:00 AM", "The 32-hour build, launch, sales, and livestream window begins."],
+  ["Nov 15 · 6:00 PM", "Products, demos, revenue summaries, and final submissions are due."],
 ] as const;
 
 export const deliverables = [
@@ -47,7 +47,7 @@ export const applicationSections = [
   { title: "Team information", questions: ["What is your team name?", "What are the full names and ages of both team members?", "What is the team leader’s email address and WhatsApp number?", "Which city are you applying from?", "Share both members’ GitHub, LinkedIn, portfolio, or previous project links."] },
   { title: "Experience", questions: ["What is the most technically challenging product you have built? Explain your contribution and share evidence.", "Have you launched a product for real users or generated revenue from one?", "What are the primary technical and business skills of each team member?"] },
   { title: "Product and execution", questions: ["What software or digital product are you planning to build, complete, or monetize?", "What is its current stage: new build, prototype, working MVP, or deployed but not monetized?", "Who are your target customers, and what problem does the product solve?", "How will you acquire your first three paying customers during the event?", "What is your execution plan, and what will each teammate own?"] },
-  { title: "Commitment", questions: ["Can both members attend from October 25 at 10 AM until October 26 at 6 PM?", "Can your team deliver a deployed product, validated payment flow, and self-recorded demo?", "Do you agree to the competition, livestream, payment-verification, and participation guidelines?"] },
+  { title: "Commitment", questions: ["Can both members attend from November 14 at 10 AM until November 15 at 6 PM?", "Can your team deliver a deployed product, validated payment flow, and self-recorded demo?", "Do you agree to the competition, livestream, payment-verification, and participation guidelines?"] },
 ] as const;
 
 export const faqs = [
