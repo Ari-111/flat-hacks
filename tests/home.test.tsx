@@ -8,7 +8,7 @@ import ApplyPage from "@/app/apply/page";
 import RulesPage from "@/app/rules/page";
 import SponsorsPage from "@/app/sponsors/page";
 import PrivacyPage from "@/app/privacy/page";
-import { Countdown, timeUntil } from "@/components/motion/Countdown";
+import { Countdown, parseManualDays, timeUntil } from "@/components/motion/Countdown";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { emailHref, eventStatus, externalHref, pageMetadata } from "@/lib/site";
 import nextConfig from "../next.config";
@@ -26,7 +26,7 @@ describe("Flat Hack 605 website", () => {
   it("renders the revenue-focused homepage and real workspace proof", () => {
     const { container } = render(<Home />);
 
-    expect(screen.getByRole("heading", { level: 1, name: /32 hours.*6 teams.*one flat/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1, name: /five days.*one intense run/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /can you make something people will pay for/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /first to.*\$100 wins/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /experienced builders.*two people per team/i })).toBeInTheDocument();
@@ -97,6 +97,10 @@ describe("Flat Hack 605 website", () => {
   it("calculates countdowns and event phases deterministically", () => {
     expect(timeUntil("", Date.now())).toBeNull();
     expect(timeUntil("2026-10-25T10:00:00+05:30", Date.parse("2026-10-24T10:00:00+05:30"))).toEqual([1, 0, 0, 0]);
+    expect(parseManualDays("12")).toBe(12);
+    expect(parseManualDays("")).toBeNull();
+    expect(parseManualDays("-1")).toBeNull();
+    expect(parseManualDays("1.5")).toBeNull();
     expect(eventStatus(Date.parse("2026-10-20T12:00:00+05:30")).phase).toBe("applications");
     expect(eventStatus(Date.parse("2026-10-23T12:00:00+05:30")).phase).toBe("interviews");
     expect(eventStatus(Date.parse("2026-10-25T12:00:00+05:30")).phase).toBe("live");
