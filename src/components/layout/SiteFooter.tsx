@@ -24,7 +24,7 @@ export function SiteFooter() {
         <div className="site-footer__brand">
           <Link className="footer-mark" href="/" aria-label="Flat Hack 605 home"><Brand /></Link>
           <p className="site-footer__summary">32 hours. Six teams. One flat. The first to $100 in verified product revenue wins.</p>
-          <p className="site-footer__note">October 25–26, 2026 · In person · Livestreamed</p>
+          <p className="site-footer__note">November 14–15, 2026 · In person · Livestreamed</p>
         </div>
         <nav className="site-footer__nav" aria-label="Footer navigation">
           <p className="site-footer__label">EVENT</p>

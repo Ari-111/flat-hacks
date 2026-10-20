@@ -21,12 +21,12 @@ export function pageMetadata(title: string, description: string, path: `/${strin
 }
 
 export const event = {
-  applicationDeadline: "2026-10-22T23:59:00+05:30",
-  interviewsStart: "2026-10-23T00:00:00+05:30",
-  onboardingStart: "2026-10-24T00:00:00+05:30",
-  eventDayStart: "2026-10-25T00:00:00+05:30",
-  startAt: "2026-10-25T10:00:00+05:30",
-  endAt: "2026-10-26T18:00:00+05:30",
+  applicationDeadline: "2026-11-11T23:59:00+05:30",
+  interviewsStart: "2026-11-12T00:00:00+05:30",
+  onboardingStart: "2026-11-13T00:00:00+05:30",
+  eventDayStart: "2026-11-14T00:00:00+05:30",
+  startAt: "2026-11-14T10:00:00+05:30",
+  endAt: "2026-11-15T18:00:00+05:30",
   applicationUrl: process.env.NEXT_PUBLIC_APPLICATION_URL ?? "",
   sponsorUrl: process.env.NEXT_PUBLIC_SPONSOR_URL ?? "",
   sponsorEmail: process.env.NEXT_PUBLIC_SPONSOR_EMAIL ?? "",
@@ -58,7 +58,7 @@ export type EventPhase = "applications" | "closed" | "interviews" | "onboarding"
 
 export function eventStatus(now: number): { phase: EventPhase; label: string; target?: string } {
   if (now < Date.parse(event.applicationDeadline)) return { phase: "applications", label: "Applications close in", target: event.applicationDeadline };
-  if (now < Date.parse(event.interviewsStart)) return { phase: "closed", label: "Applications closed · interviews October 23" };
+  if (now < Date.parse(event.interviewsStart)) return { phase: "closed", label: "Applications closed · interviews November 12" };
   if (now < Date.parse(event.onboardingStart)) return { phase: "interviews", label: "Online interviews today" };
   if (now < Date.parse(event.eventDayStart)) return { phase: "onboarding", label: "Final team onboarding" };
   if (now < Date.parse(event.startAt)) return { phase: "upcoming", label: "The hackathon begins in", target: event.startAt };

@@ -96,15 +96,15 @@ describe("Flat Hack 605 website", () => {
 
   it("calculates countdowns and event phases deterministically", () => {
     expect(timeUntil("", Date.now())).toBeNull();
-    expect(timeUntil("2026-10-25T10:00:00+05:30", Date.parse("2026-10-24T10:00:00+05:30"))).toEqual([1, 0, 0, 0]);
+    expect(timeUntil("2026-11-14T10:00:00+05:30", Date.parse("2026-11-13T10:00:00+05:30"))).toEqual([1, 0, 0, 0]);
     expect(parseManualDays("12")).toBe(12);
     expect(parseManualDays("")).toBeNull();
     expect(parseManualDays("-1")).toBeNull();
     expect(parseManualDays("1.5")).toBeNull();
-    expect(eventStatus(Date.parse("2026-10-20T12:00:00+05:30")).phase).toBe("applications");
-    expect(eventStatus(Date.parse("2026-10-23T12:00:00+05:30")).phase).toBe("interviews");
-    expect(eventStatus(Date.parse("2026-10-25T12:00:00+05:30")).phase).toBe("live");
-    expect(eventStatus(Date.parse("2026-10-27T12:00:00+05:30")).phase).toBe("complete");
+    expect(eventStatus(Date.parse("2026-11-09T12:00:00+05:30")).phase).toBe("applications");
+    expect(eventStatus(Date.parse("2026-11-12T12:00:00+05:30")).phase).toBe("interviews");
+    expect(eventStatus(Date.parse("2026-11-14T12:00:00+05:30")).phase).toBe("live");
+    expect(eventStatus(Date.parse("2026-11-16T12:00:00+05:30")).phase).toBe("complete");
   });
 
   it("accepts only safe configured destinations", () => {

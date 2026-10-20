@@ -10,7 +10,7 @@ export function Registration() {
         <p className="section-kicker">ONLY FIVE APPLICATION SLOTS</p>
         <h2 id="register-title">Bring the product.<br />Find the customer.</h2>
         <div className="register-bottom">
-          <p>Applications close October 22, 2026 at 11:59 PM IST. Submission does not guarantee selection; shortlisted teams interview online on October 23.</p>
+          <p>Applications close November 11, 2026 at 11:59 PM IST. Submission does not guarantee selection; shortlisted teams interview online on November 12.</p>
           <div className="register-actions"><ButtonLink href={application} target={application ? "_blank" : undefined} rel={application ? "noopener noreferrer" : undefined} expiresAt={event.applicationDeadline} unavailableLabel="Application link coming soon">Apply to Flat Hack 605</ButtonLink><a className="text-link" href="/apply">Preview every application question →</a></div>
         </div>
       </Reveal>
