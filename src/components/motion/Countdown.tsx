@@ -55,7 +55,7 @@ export function Countdown() {
             </span>
           ))}
         </div>
-      ) : <span className="hero-countdown-pending">{status.phase === "live" ? "32 hours in motion" : status.label}</span>}
+      ) : <span className="hero-countdown-pending">{status.phase === "live" ? "36 hours in motion" : status.label}</span>}
     </div>
   );
 }

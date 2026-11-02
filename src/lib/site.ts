@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 export const site = {
   name: "Flat Hack 605",
   title: "Flat Hack 605 — Build. Launch. Earn.",
-  description: "A 32-hour livestreamed hackathon where six experienced teams build, launch, and race to earn their first $100 in verified product revenue.",
+  description: "A 36-hour livestreamed hackathon where six experienced teams build, launch, and race to earn their first $100 in verified product revenue.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
 };
 
 export function pageMetadata(title: string, description: string, path: `/${string}`): Metadata {
   const resolvedTitle = `${title} — ${site.name}`;
-  const image = { url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — 32 hours, 6 teams, one flat` };
+  const image = { url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — 36 hours, 6 teams, one flat` };
 
   return {
     title,
@@ -26,7 +26,7 @@ export const event = {
   onboardingStart: "2026-11-13T00:00:00+05:30",
   eventDayStart: "2026-11-14T00:00:00+05:30",
   startAt: "2026-11-14T10:00:00+05:30",
-  endAt: "2026-11-15T18:00:00+05:30",
+  endAt: "2026-11-15T22:00:00+05:30",
   applicationUrl: process.env.NEXT_PUBLIC_APPLICATION_URL ?? "",
   sponsorUrl: process.env.NEXT_PUBLIC_SPONSOR_URL ?? "",
   sponsorEmail: process.env.NEXT_PUBLIC_SPONSOR_EMAIL ?? "",

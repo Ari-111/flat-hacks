@@ -48,7 +48,7 @@ export function EventDetails() {
         <Image src="/assets/execution-balance.png" alt="" fill sizes="100vw" />
         <div className="livestream__shade" />
         <Reveal className="livestream__copy">
-          <p className="section-kicker">32-HOUR LIVESTREAM</p>
+          <p className="section-kicker">36-HOUR LIVESTREAM</p>
           <h2 id="livestream-title">Watch products become businesses.</h2>
           <p>Opening pitches, build updates, customer acquisition, verified revenue, final demos, and the winner announcement—documented without broadcasting credentials, payment data, private spaces, or customer information.</p>
           <ButtonLink href={livestream} target={livestream ? "_blank" : undefined} rel={livestream ? "noopener noreferrer" : undefined} variant="light" unavailableLabel="Livestream link coming soon">Watch the livestream</ButtonLink>
@@ -56,7 +56,7 @@ export function EventDetails() {
       </section>
 
       <section className="sponsors section" id="sponsors" aria-labelledby="sponsors-title">
-        <div className="section-heading split-heading"><p className="section-kicker">FOUNDING PARTNERS</p><div><h2 id="sponsors-title">Help power 32 hours of building.</h2><p className="large-copy">Support meals, tools, refreshments, and the infrastructure that helps six teams reach real customers.</p></div></div>
+        <div className="section-heading split-heading"><p className="section-kicker">FOUNDING PARTNERS</p><div><h2 id="sponsors-title">Help power 36 hours of building.</h2><p className="large-copy">Support meals, tools, refreshments, and the infrastructure that helps six teams reach real customers.</p></div></div>
         <div className="sponsor-table">{sponsorships.map(([title, amount, benefits]) => <article key={title}><h3>{title}</h3><strong>{amount}</strong><p>{benefits}</p></article>)}</div>
         <div className="sponsors__action"><p>Packages are proposed and subject to agreement. Audience size, livestream views, and commercial outcomes are not guaranteed.</p><div className="sponsors__links"><ButtonLink href={sponsor ?? "/sponsors"} target={sponsor ? "_blank" : undefined} rel={sponsor ? "noopener noreferrer" : undefined}>Become a founding sponsor</ButtonLink>{sponsorEmail && <a className="text-link" href={sponsorEmail}>Email the sponsor team →</a>}</div></div>
       </section>

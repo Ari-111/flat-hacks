@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { motion, useMotionValueEvent, useReducedMotion, useScroll, useTransform, type MotionStyle } from "motion/react";
 
 const chapters = [
-  { eyebrow: "01 / EVIDENCE", title: "Show us what you have shipped", description: "Strong applications connect previous work to a credible product, customer, and 32-hour execution plan." },
+  { eyebrow: "01 / EVIDENCE", title: "Show us what you have shipped", description: "Strong applications connect previous work to a credible product, customer, and 36-hour execution plan." },
   { eyebrow: "02 / SELECTION", title: "Five application teams. One wildcard.", description: "Only six teams enter the flat. Shortlisted applicants interview online with both teammates present." },
   { eyebrow: "03 / COMMITMENT", title: "Stay for the build and the business", description: "Selected teams commit to the full event, the livestream, verified payments, and every final deliverable." },
 ];

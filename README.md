@@ -1,6 +1,6 @@
 # Flat Hack 605
 
-A responsive event site for the 32-hour Flat Hack 605 product-and-revenue challenge.
+A responsive event site for the 36-hour Flat Hack 605 product-and-revenue challenge.
 It combines documentary workspace photography with the existing editorial artwork
 and motion system.
 

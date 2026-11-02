@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: site.name,
     url: "/",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Flat Hack 605 — 32 hours, 6 teams, one flat" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Flat Hack 605 — 36 hours, 6 teams, one flat" }],
   },
   twitter: { card: "summary_large_image", title: site.title, description: site.description, images: ["/opengraph-image"] },
   robots: { index: true, follow: true },
